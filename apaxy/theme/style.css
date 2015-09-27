@@ -1,10 +1,3 @@
-/*------------------------------------*\
-    Apaxy
-    by @adamwhitcroft
-
-    Theme name: Apaxy
-    Theme author: @adamwhitcroft
-\*------------------------------------*/
 @import url('//fonts.googleapis.com/css?family=Open+Sans');
 /* Have to use @import for the font, as you can only specify a single stylesheet */
 * {
@@ -19,7 +12,7 @@ html {
 	min-height:100%;
 	border-top:10px solid #ECEEF1;
 	border-bottom:10px solid #ECEEF1;
-	color:#61666c;
+	color:#ddd;
 	font-weight:400;
 	font-size:1em;
 	font-family:'Open Sans', sans-serif;
@@ -27,34 +20,36 @@ html {
 }
 body {
 	padding:20px;
+	background-color: #333;
 	-webkit-backface-visibility:hidden;
 }
 code {
 	font-family:consolas,monospace;	
 }
 a {
-	color:#61666c;
+	color:#ddd;
 	text-decoration:none;
 }
 a:hover {
-	color:#2a2a2a;
+	color:#FF9600;
 }
-/*------------------------------------*\
-    Wrapper
-\*------------------------------------*/
 .wrapper {
 	margin:0 auto;
 	padding-top:20px;
 	max-width:500px;
 }
-/*------------------------------------*\
-    Demo block
-\*------------------------------------*/
 .block {
 	font-size:.875em;
 	margin:20px 0;
 	padding:20px;
 	color:#9099A3;
+}
+.header {
+	background: url('images/logo.png');
+	width: 292px;
+	height: 71px;
+	display: block;
+	margin: 0 auto;
 }
 /*------------------------------------*\
     Table (directory listing)
@@ -69,7 +64,7 @@ tr {
 	border:0;
 }
 tr:hover td {
-	background:#f6f6f6;
+	background:#465A6A;
 }
 th {
 	text-align:left;
@@ -95,7 +90,7 @@ td {
 	padding:5px 0;
 	outline:0;
 	border:0;
-	border-bottom:1px solid #edf1f5;
+	border-bottom:1px dashed #777;
 	vertical-align:middle;
 	text-align:left;
 	-webkit-transition:background 300ms ease;
@@ -111,12 +106,25 @@ tr.parent a[href^="/"] {
 	color:#9099A3;
 }
 	.parent a[href^="/"]:hover {
-		color:#2281d0;
+		color:#FF9600;
 	}
-/*------------------------------------*\
-    Footer
-\*------------------------------------*/
+
 .footer {
-	text-align:center;
+	text-align: center;
 	font-size:.75em;
+	padding-top: 1em;
+}
+.footer_img {
+	width: 131px;
+	height: 25px;
+	z-index: 1;
+	margin: 1.5em auto;
+}
+.footer_img:before {
+	content: '';
+	padding-left: 131px;
+	z-index: -1;
+	background: url('images/footer.png') no-repeat;
+	opacity: 0.2;
+    filter: alpha(opacity=20); /* For IE8 and earlier */
 }
